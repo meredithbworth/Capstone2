@@ -37,6 +37,7 @@ body {
   ),
   url("mike-petrucci-c9FQyqIECds-unsplash.jpg");
   background-size: 100rem;
+  color:white;
 }
 
 .products {
@@ -47,7 +48,7 @@ body {
 
 .product-card {
  width: 360px;
- height: 460px;
+ height: 580px;
  margin: 10px; 
  background-color: gray;
  border: 2px;

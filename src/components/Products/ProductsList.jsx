@@ -3,22 +3,21 @@ import { useGetProductsListQuery } from '../../api/productsListApi'
 
 const Products = () => {
 
-  const { data, error, isLoading } = useGetProductsListQuery();
-//   console.log(data)
-  let message;
+  const { data={}, error, isLoading } = useGetProductsListQuery();
+  // console.log(data);
 
   if (isLoading) {
-    message = 'Loading Products...'
+    return <p>'Loading Products...'</p>
   }
 
   if (error) {
-    message = error.data.error.message
+    return <p>error.data.error.message</p>
   }
   return (
     <div className="products">
-      {isLoading && <p>{message}</p>}
-      {error && <p>{message}</p>}
-      {data?.data?.products && data.data.products.map((product) => (
+      {/* {isLoading && <p>{message}</p>} */}
+      {/* {error && <p>{message}</p>} */}
+      {data.map((product) => (
         
         <div key={product.id} className="product-card">
 
