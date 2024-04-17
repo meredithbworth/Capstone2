@@ -40,6 +40,10 @@ body {
   color:white;
 }
 
+.header {
+  
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +96,10 @@ body {
 }
 
 .home-image {
- width: 
+ width:200px;
+ height:150px;
+ margin:20px;
+
 }
 
 .button {
