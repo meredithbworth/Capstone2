@@ -124,10 +124,10 @@ a {
 .button {
   width: 150px;
   height: 100px;
-  margin: 10px;
+  justify-content: center;
   background-color: burlywood; 
   font-size: 20px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .form-front{

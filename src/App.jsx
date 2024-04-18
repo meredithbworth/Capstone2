@@ -1,6 +1,3 @@
-// import { useState, React } from 'react'
-// import SignUp from './components/AuthSign/SignUp'
-// import Authenticate from './components/AuthSign/Authenticate'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Products/Home'

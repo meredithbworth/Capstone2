@@ -1,6 +1,4 @@
 import { NavLink } from 'react-router-dom'
-// import SignUp from './AuthSign/SignUp'
-
 
 function Navbar ({token, setToken}) {
     const Logout = () => {setToken(null)}
