@@ -8,10 +8,11 @@ function Home () {
             src="https://www.solopress.com/blog/wp-content/uploads/2020/11/Lorem-Ipsum.jpg"
             alt="store front"
             />
+            <div>
             <Link to="/products">
                 <button className="button">Enter</button>
             </Link>
-
+            </div>
         </div>
     )
 }

@@ -1,49 +1,58 @@
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function SignUp({setToken}) {
-    const [username, setUsername] = useState("");
+    const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
+
+    const Navigate = useNavigate()
 
 async function handleSubmit(e){
     e.preventDefault();
     setError(null);
-    // console.log("Hello!");
-    if (username.length < 5) {
-       setError("Username should be more than 5 characters in length");
-       return 
-    }
-    console.log(password, password.includes("$"));
-    if (!password.includes("$")){
-        setError("Password should include $");
-        return
-    }
+
     try {
     // throw new Error('Parameter is not a number!');
-      const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
+      const response = await fetch("https://fakestoreapi.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" }, 
-        body: JSON.stringify({username, password}),
+        body: JSON.stringify({username:login, password}),
       })
       const result = await response.json();
       setToken(result.token);
       console.log(result);
+      Navigate("/");
     } catch (error) {
         setError(error.message);
     }
 }
     return (
-    <>    
+    <>  
+        
         <h2 className='header'>Sign Up</h2> 
         {error && <p>{error}</p>}
 
-        <form onSubmit={handleSubmit}>
-            <label>Username: <input value={username} onChange={(e) => setUsername(e.target.value)}/>
+        <form onSubmit={handleSubmit} className="form-front">
+            <label>Login: <input value={login} onChange={(e) => setLogin(e.target.value)}/>
             </label>
             <label>Password: <input value={password} onChange={(e) => setPassword(e.target.value)}/>
             </label>
             <button>Submit</button>
         </form>
+        {/* <div>
+      {isAuthenticated ? (
+        <div>
+          <p>Welcome! You are logged in.</p>
+          <button onClick={logout}>Logout</button>
+        </div>
+      ) : (
+        <div>
+          <p>Please login</p>
+          <button onClick={login}>Login</button>
+        </div>
+      )}
+    </div> */}
     </>
     )
 }

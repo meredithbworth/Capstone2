@@ -1,10 +1,15 @@
 import React from 'react'
 import { useGetProductsListQuery } from '../../api/productsListApi'
+import Details from './Details'
 
 const Products = () => {
 
   const { data={}, error, isLoading } = useGetProductsListQuery();
   // console.log(data);
+
+  // function itemCost() {
+  //   return price.parseFloat().toFixed(2);
+  // }
 
   if (isLoading) {
     return <p>'Loading Products...'</p>
@@ -36,10 +41,15 @@ const Products = () => {
             
             <p>{product.price}</p> 
             
-            <p>{product.description}</p>
+            {/* <p>{product.description}</p> */}
+
           </div>
             <div className="product-image-container">
                 <img className="product-image"  src={product.image} />
+
+            {/* <Link to="/products/:productsId">
+                <button className="button">Click for more</button>
+            </Link> */}
             </div>
         </div>
       ))}
