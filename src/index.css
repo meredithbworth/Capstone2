@@ -29,7 +29,7 @@ a {
 
 .product-card {
  width: 300px;
- height: 300px;
+ height: 450px;
  margin: 30px; 
  background-color: gray;
  border: 2px;
@@ -56,10 +56,9 @@ a {
 }
 
 .product-image-container {
- /* display: flex; */
+ text-align: center;
  align-items:last baseline; 
  height: 100px;
- padding: 10px;
 }
 
 
@@ -69,7 +68,11 @@ a {
  object-fit: contain;
  margin-left: 30px;
  margin-right: 10px;
- margin-bottom: 40px;
+ /* margin-bottom: 40px; */
+}
+
+.price {
+  font-size: 20px;
 }
 
 .product-details {
@@ -85,14 +88,14 @@ a {
   margin: 60%; 
 }
 
-/* button.button-productsID {
-  width: 150px;
-  height: 100px;
+.button-productsID {
+  width: 100px;
+  height: 30px;
   justify-content: center;
   background-color: burlywood; 
   font-size: 20px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-} */
+}
 
 .catalog-header {
   color: grey;
@@ -117,21 +120,22 @@ a {
 
 .header-signup{
   font-size: 3rem;
-
 }
 
-.login {
-  ;
+.login.div.container {
+  justify-content: center;
 }
 
 .button {
   width: 150px;
   height: 100px;
-  margin: auto;
-  /* justify-content: center; */
+  margin: 150px;   
   background-color: burlywood; 
   font-size: 30px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.home-imagery {
+  text-align: center;
 }
 
 .form-front{

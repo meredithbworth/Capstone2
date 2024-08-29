@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 function Home () {
     return(
+      <div className="home-imagery">
         <div className='home-wrapper'>
             <img 
             className="home-image"
@@ -14,6 +15,7 @@ function Home () {
             </Link>
             </div>
         </div>
+      </div>
     )
 }
 export default Home;

@@ -38,9 +38,7 @@ const Products = () => {
                     image:'...'
                 }, */}
             
-            <h2>{product.title}</h2> 
-            
-            <p>{product.price}</p> 
+            <h2>{product.title}</h2>  
             
             {/* <p>{product.description}</p> */}
 
@@ -49,6 +47,7 @@ const Products = () => {
                 <img className="product-image"  src={product.image} />
 
                 <div>
+                <p className="price">{product.price}</p>
             <Link to="/products/:productsID">
                 <button className="button-productsID">Details</button>
             </Link>
