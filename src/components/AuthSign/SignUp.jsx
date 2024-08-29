@@ -25,7 +25,7 @@ async function handleSubmit(e){
 }
     return (
     <>  
-        
+       <div className="login"> 
         <h2 className='header-signup'>Sign Up</h2> 
         {error && <p>{error}</p>}
 
@@ -49,6 +49,7 @@ async function handleSubmit(e){
         </div>
       )}
     </div> */}
+    </div>
     </>
     )
 }
