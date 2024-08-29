@@ -48,9 +48,9 @@ const Products = () => {
 
                 <div>
                 <p className="price">{product.price}</p>
-            <Link to="/products/:productsID">
+            {/* <Link to="/products/:productsID">
                 <button className="button-productsID">Details</button>
-            </Link>
+            </Link> */}
             </div>
             </div>
         </div>
