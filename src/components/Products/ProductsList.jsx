@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom'
 const Products = () => {
 
   const { data={}, error, isLoading } = useGetProductsListQuery();
+  // console.log(data);
+
+  // function itemCost() {
+  //   return price.parseFloat().toFixed(2);
+  // }
 
   if (isLoading) {
     return <p>'Loading Products...'</p>
@@ -16,6 +21,8 @@ const Products = () => {
   }
   return (
     <div className="products">
+      {/* {isLoading && <p>{message}</p>} */}
+      {/* {error && <p>{message}</p>} */}
       {data.map((product) => (
         
         <div key={product.id} className="product-card">
@@ -33,7 +40,9 @@ const Products = () => {
             
             <h2>{product.title}</h2> 
             
-            <p>{product.price}</p>
+            <p>{product.price}</p> 
+            
+            {/* <p>{product.description}</p> */}
 
           </div>
             <div className="product-image-container">

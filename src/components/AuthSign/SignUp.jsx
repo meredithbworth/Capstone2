@@ -1,12 +1,9 @@
 import {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
 
 export default function SignUp({setToken}) {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
-
-    const Navigate = useNavigate()
 
 async function handleSubmit(e){
     e.preventDefault();
@@ -22,7 +19,6 @@ async function handleSubmit(e){
       const result = await response.json();
       setToken(result.token);
       console.log(result);
-      Navigate("/");
     } catch (error) {
         setError(error.message);
     }

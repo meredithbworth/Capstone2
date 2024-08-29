@@ -4,8 +4,6 @@ function Details () {
     return(
         <div className="products">
       {data.map((product) => (
-        
-        <div key={product.id} className="product-card">
           
           <div className="product-details">
           {/* {
@@ -16,20 +14,13 @@ function Details () {
                     description:'...',
                     image:'...'
                 }, */}
-            
             <h3>{product.title}</h3> 
             
             <p>{product.description}</p>
-
-          </div>
             <div className="product-image-container">
                 <img className="product-image"  src={product.image} />
-
-            {/* <Link to="/products/:productsId">
-                <button className="button">Click for more</button>
-            </Link> */}
-            </div>
-        </div>
+          </div>
+          </div>
       ))}
     </div>
     )
