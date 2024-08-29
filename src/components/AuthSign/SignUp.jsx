@@ -26,7 +26,7 @@ async function handleSubmit(e){
     return (
     <>  
         
-        <h2 className='header'>Sign Up</h2> 
+        <h2 className='header-signup'>Sign Up</h2> 
         {error && <p>{error}</p>}
 
         <form onSubmit={handleSubmit} className="form-front">

@@ -13,7 +13,7 @@ const Products = () => {
   // }
 
   if (isLoading) {
-    return <p>'Loading Products...'</p>
+    return <p className="loading">Loading Products. One moment please...</p>
   }
 
   if (error) {
@@ -48,9 +48,11 @@ const Products = () => {
             <div className="product-image-container">
                 <img className="product-image"  src={product.image} />
 
-            {/* <Link to="/products/:productsId">
-                <button className="button">Click for more</button>
-            </Link> */}
+                <div>
+            <Link to="/products/:productsID">
+                <button className="button-productsID">Details</button>
+            </Link>
+            </div>
             </div>
         </div>
       ))}
