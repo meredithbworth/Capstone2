@@ -11,6 +11,7 @@ function App() {
   return (
     <div id="container">
       <div>
+        <h1 className="header">Lorem's Bodega</h1>
         <nav>
           <Navbar token={token} setToken={setToken}/>
         </nav>

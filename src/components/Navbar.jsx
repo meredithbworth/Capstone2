@@ -5,9 +5,9 @@ function Navbar ({token, setToken}) {
     if( token ) {
         return (
             <div id="navbar" className="nav-links">
-                <h1 className="header">Lorem's Bodega</h1>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/products">Catalog</NavLink>
+                <NavLink> to="/products/productsId>Details</NavLink>
                 <a onClick={Logout}>Logout</a>
             </div>
         );
