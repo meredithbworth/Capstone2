@@ -25,15 +25,17 @@ const Products = () => {
 
           </div>
             <div className="product-image-container">
-                <img className="product-image"  src={product.image} />
+              <img className="product-image"  src={product.image} />
 
-                <div>
+              <div>
                 <p className="price">${product.price.toFixed(2)}</p>
-            {/* <Link to="/products/:productsID">
-                <button className="button-productsID">Details</button>
-            </Link> */}
+              </div>
+              <div>
+                <Link to="/products/productsId">
+                    <button className="details-button">Details</button>
+                </Link>
             </div>
-            </div>
+          </div>
         </div>
       ))}
     </div>

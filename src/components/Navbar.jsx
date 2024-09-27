@@ -18,7 +18,6 @@ function Navbar ({token, setToken}) {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/products">Catalog</NavLink>
             <NavLink to="/SignUp">Login</NavLink>
-        
         </div>
     );
 }
