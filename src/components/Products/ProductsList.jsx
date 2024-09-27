@@ -3,6 +3,7 @@ import { useGetProductsListQuery } from '../../api/productsListApi'
 import Details from './Details'
 import { Link } from 'react-router-dom'
 
+
 const Products = () => {
 
   const { data={}, error, isLoading } = useGetProductsListQuery();
@@ -27,7 +28,7 @@ const Products = () => {
                 <img className="product-image"  src={product.image} />
 
                 <div>
-                <p className="price">{product.price}</p>
+                <p className="price">${product.price.toFixed(2)}</p>
             {/* <Link to="/products/:productsID">
                 <button className="button-productsID">Details</button>
             </Link> */}
