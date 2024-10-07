@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGetProductsListQuery } from '../../api/productsListApi'
-import Details from './Details'
+// import Details from './Details'
 import { Link } from 'react-router-dom'
 
 

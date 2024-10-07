@@ -7,14 +7,18 @@ export const productsListApi = createApi({
   }),
   endpoints: (builder) => ({
     getProductsList: builder.query({
-      query: () => `products`,
+      query: () => `/products`
+    }),
+    getProductDetails: builder.mutation({
+      query: (id) => ({
+      url: `/products/${id}`,
+      method: 'POST',
+      body
+      })
     }),
   }),
-    // getProductDetails: builder.query({
-    //   query: (id) => `products/${id}`,
-    // }),
 });
 
-// export const { useGetProductsListQuery, useGetProductDetailsQuery } = productsListApi;
+// export const { useGetProductsListQuery } = productsListApi;
 
-export const { useGetProductsListQuery } = productsListApi;
+export const { useGetProductsListQuery, useGetProductDetailsMutation } = productsListApi;

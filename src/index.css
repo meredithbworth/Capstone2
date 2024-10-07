@@ -14,6 +14,10 @@ a {
   display: block;
 }
 
+a.active {
+  color: purple;
+}
+
 .header {
   font-family: monospace;
   color: white;
@@ -84,9 +88,9 @@ a {
  text-align: center;
 }
 
-.product-details-button {
+/* .product-details-button {
   margin: 60%; 
-}
+} */
 
 .button-productsID {
   width: 100px;
@@ -134,6 +138,16 @@ a {
   font-size: 30px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.details-button {
+  width: 75px;
+  height: 25px;
+  margin: 20px;   
+  background-color: rgb(55, 32, 2); 
+  font-size: 18px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .home-imagery {
   text-align: center;
 }

@@ -16,12 +16,12 @@ function App() {
           <Navbar token={token} setToken={setToken}/>
         </nav>
       </div>
-    <Routes>
+    {/* <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/products' element={<Products/>}/>
       <Route path='/products/:productsId' element={<Details/>}/>
       <Route path='/SignUp' element={<SignUp setToken={setToken}/>}/>
-    </Routes>
+    </Routes> */}
     </div>
   );
 }
