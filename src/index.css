@@ -18,6 +18,10 @@ a.active {
   color: purple;
 }
 
+.back-button {
+
+}
+
 .header {
   font-family: monospace;
   color: white;
@@ -32,7 +36,7 @@ a.active {
 }
 
 .product-card {
- width: 300px;
+ width: 310px;
  height: 450px;
  margin: 30px; 
  background-color: gray;
@@ -40,22 +44,20 @@ a.active {
  border-radius: 4%;
  overflow: hidden;
  position: relative;
- transition: transform 0.3s;
+ transition: transform 0.5s;
 }
 
 .product-card:hover {
  transform: translateY(-9px);
 }
 
-.nav-links {
-  color: white;
-}
-
 #navbar {
+  color: white;
+  position: fixed;
+  top: 0px;
   display: flex;
-  justify-content: space-between;
-  width: 50%;
-  margin-left: 400px;
+  justify-content: right;        
+  width: 98%;
   font-size: 20px;
 }
 
@@ -131,19 +133,20 @@ a.active {
 }
 
 .button {
-  width: 150px;
+  width: 300px;
   height: 100px;
-  margin: 150px;   
+  margin: 50px;   
   background-color: burlywood; 
   font-size: 30px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .details-button {
-  width: 75px;
-  height: 25px;
+  width: 85px;
+  height: 30px;
   margin: 20px;   
-  background-color: rgb(55, 32, 2); 
+  background-color: rgb(55, 32, 2);
+  color: white; 
   font-size: 18px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -157,5 +160,27 @@ a.active {
   display: flex;
 }
 
-@media screen and (max-width: 320px) {
+@media all and (min-width: 768px) {
+  .navbar-links {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+}
+
+@media all and (min-width: 992px) {
+  .navbar-links {
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media all and (min-width: 1200px) {
+  .navbar-links {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import { useGetProductDetailsMutation } from '../../api/productsListApi'
+import { useGetProductDetailsQuery } from '../../api/productDetailsApi'
 
 
 function Details () {
 
-    const { data={}, error, isLoading } = useGetProductDetailsMutation();
+    const { data={}, error, isLoading } = useGetProductDetailsQuery();
   
     if (isLoading) {
       return <p className="loading">Loading item details. One moment please...</p>
@@ -18,12 +18,20 @@ function Details () {
       {data.map((product) => (
           <div key={product.id} className="details-card">
           {/* <div className="details-categories"> */}
-                <img className="product-image"  src={product.image} />
+                <img className="details-image"  src={product.image} />
+                <div>
                 <h3>{product.title}</h3>
-                <p className="price">${product.price.toFixed(2)}</p>
+                </div>
+                <p className="details-price">${product.price.toFixed(2)}</p>
                 <p>{product.description}</p>
             {/* </div> */}
+            <div>
+                <Link to="/products">
+                    <button className="back-button">Back</button>
+                </Link>
+              </div>
           </div>
+          
       ))}
     </div>
     )

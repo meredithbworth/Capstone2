@@ -34,7 +34,7 @@ const Products = () => {
                 <Link to="/products/productsId">
                     <button className="details-button">Details</button>
                 </Link>
-            </div>
+              </div>
           </div>
         </div>
       ))}
