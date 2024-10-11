@@ -19,7 +19,8 @@ a.active {
 }
 
 .back-button {
-
+  background-color: white;
+  margin: 10px;
 }
 
 .header {
