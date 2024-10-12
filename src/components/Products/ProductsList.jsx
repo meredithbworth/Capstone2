@@ -1,13 +1,13 @@
 import React from 'react'
 import { useGetProductsListQuery } from '../../api/productsListApi'
 // import Details from './Details'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Products = () => {
 
   const { data={}, error, isLoading } = useGetProductsListQuery();
-
+  const navigate = useNavigate();
   if (isLoading) {
     return <p className="loading">Loading Products. One moment please...</p>
   }
@@ -19,24 +19,17 @@ const Products = () => {
     <div className="products">
       {data.map((product) => (
         
-        <div key={product.id} className="product-card">        
-          <div className="product-details">
-            <h2>{product.title}</h2>  
-
-          </div>
-            <div className="product-image-container">
-              <img className="product-image"  src={product.image} />
-
-              <div>
-                <p className="price">${product.price.toFixed(2)}</p>
-              </div>
-              <div>
-                <Link to="/products/productsId">
-                    <button className="details-button">Details</button>
-                </Link>
-              </div>
-          </div>
-        </div>
+        <div key={product.id} className="product-card"> 
+          <button className="on-product-click" onClick={() => {navigate(
+            `/products/${product.id}`)}}> 
+            <img className="product-image"  src={product.image} alt={product.title} />
+            <p className="product-title">{product.title}</p>
+          </button>
+            <p className="price">${product.price.toFixed(2)}</p>
+          {/* <Link to="/products">
+            <button className="back-button">Back</button>
+          </Link> */}
+        </div> 
       ))}
     </div>
   );

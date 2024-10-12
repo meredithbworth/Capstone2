@@ -1,11 +1,11 @@
 body {
   background-color: black;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     rgba(0, 0, 0, 0.7), 
     rgba(0, 0, 0, 0.7)
   ),
   url("mike-petrucci-c9FQyqIECds-unsplash.jpg");
-  background-size: 100rem;
+  background-size: 100rem; */
   color:white;
 }
 
@@ -18,9 +18,30 @@ a.active {
   color: purple;
 }
 
-.back-button {
-  background-color: white;
-  margin: 10px;
+#navbar {
+  color: white;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: right;        
+  width: 98%;
+  font-size: 20px;
+}
+
+.home-image {
+  width:520px;
+  height:350px;
+  margin:auto;
+  display:grid;
+ }
+
+ .shop-button {
+  width: 120px;
+  height: 50px;
+  margin: 10px;   
+  background-color: burlywood; 
+  font-size: 30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
@@ -40,7 +61,7 @@ a.active {
  width: 310px;
  height: 450px;
  margin: 30px; 
- background-color: gray;
+ background-color: black;
  border: 2px;
  border-radius: 4%;
  overflow: hidden;
@@ -52,56 +73,53 @@ a.active {
  transform: translateY(-9px);
 }
 
-#navbar {
-  color: white;
-  position: fixed;
-  top: 0px;
-  display: flex;
-  justify-content: right;        
-  width: 98%;
-  font-size: 20px;
-}
-
-.product-image-container {
- text-align: center;
- align-items:last baseline; 
- height: 100px;
-}
-
 
 .product-image {
  width: 150px;
- height: 150px; 
+ /* height: 150px; 
  object-fit: contain;
  margin-left: 30px;
- margin-right: 10px;
+ margin-right: 10px; */
  /* margin-bottom: 40px; */
 }
 
-.price {
-  font-size: 20px;
+.product-title {
+  /* justify-content: left; */
 }
 
-.product-details {
+p {
+  font-size: 25px;
+  font-family: monospace;
+}
+
+.price {
+  text-align: center;
+  color: white;
+}
+
+/* .product-details {
  flex-direction: column;
  align-items: center;
  justify-content: center; 
  color: white; 
  font-size: 16px;
  text-align: center;
-}
-
-/* .product-details-button {
-  margin: 60%; 
 } */
 
-.button-productsID {
-  width: 100px;
-  height: 30px;
-  justify-content: center;
-  background-color: burlywood; 
-  font-size: 20px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.details-image {
+  margin: 10px;
+  justify-content: left;
+  width: 200px;
+  height: 200px;
+  object-fit: contain; 
+}
+
+.details-description{
+  text-align: left;
+}
+.back-button {
+  background-color: white;
+  margin: 10px;
 }
 
 .catalog-header {
@@ -111,13 +129,6 @@ a.active {
   justify-content: center;
   font-family: 'Times New Roman', Times, serif;
   margin: 12%;
-}
-
-.home-image {
- width:800px;
- height:600px;
- margin:auto;
- display:grid;
 }
 
 .loading {
@@ -131,25 +142,6 @@ a.active {
 
 .login.div.container {
   justify-content: center;
-}
-
-.button {
-  width: 300px;
-  height: 100px;
-  margin: 50px;   
-  background-color: burlywood; 
-  font-size: 30px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.details-button {
-  width: 85px;
-  height: 30px;
-  margin: 20px;   
-  background-color: rgb(55, 32, 2);
-  color: white; 
-  font-size: 18px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .home-imagery {

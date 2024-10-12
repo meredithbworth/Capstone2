@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+// import { emptySplitApi } from './emptySplitApi'
 
 export const productsListApi = createApi({
   reducerPath: "productsListApi",
@@ -10,6 +11,7 @@ export const productsListApi = createApi({
       query: () => `/products`
     }),
   }),
+  
 });
 
 export const { useGetProductsListQuery } = productsListApi;

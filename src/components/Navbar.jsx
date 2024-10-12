@@ -7,7 +7,6 @@ function Navbar ({token, setToken}) {
             <div id="navbar" className="nav-links">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/products">Catalog</NavLink>
-                <NavLink to="/products/productsId">Details</NavLink>
                 <a onClick={Logout}>Logout</a>
             </div>
         );
