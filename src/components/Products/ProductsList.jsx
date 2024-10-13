@@ -1,6 +1,5 @@
 import React from 'react'
 import { useGetProductsListQuery } from '../../api/productsListApi'
-// import Details from './Details'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -26,9 +25,6 @@ const Products = () => {
             <p className="product-title">{product.title}</p>
           </button>
             <p className="price">${product.price.toFixed(2)}</p>
-          {/* <Link to="/products">
-            <button className="back-button">Back</button>
-          </Link> */}
         </div> 
       ))}
     </div>

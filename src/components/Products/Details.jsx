@@ -18,7 +18,7 @@ function Details () {
       productsListGet.id === parseInt(productsId))
 
     return(
-        <div className="product-details">
+        <div className="product-details-individual">
           <div key={product.id}>
                 <h3  className="details-title">{product.title}</h3>
                 <img className="details-image"  src={product.image} />
@@ -34,31 +34,3 @@ function Details () {
     )
 }
 export default Details;
-
-
-//     return (
-//       <div className="products">
-//         {data.map((product) => (
-          
-//           <div key={product.id} className="product-card">        
-//             <div className="product-details">
-//               <h2>{product.title}</h2>  
-  
-//             </div>
-//               <div className="product-image-container">
-//                   <img className="product-image"  src={product.image} />
-  
-//                   <div>
-//                   <p className="price">{product.price}</p>
-//               {/* <Link to="/products/:productsID">
-//                   <button className="button-productsID">Details</button>
-//               </Link> */}
-//               </div>
-//               </div>
-//           </div>
-//         ))}
-//       </div>
-//     );
-//   };
-  
-//   export default Products;
