@@ -5,6 +5,7 @@ import Products from './components/Products/ProductsList'
 import Details from './components/Products/Details'
 import SignUp from './components/AuthSign/SignUp'
 import { useState } from 'react'
+// import Auth from './components/AuthSign/Authenticate'
 
 function App() {
   const [token, setToken] = useState(null);
@@ -20,8 +21,9 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/products' element={<Products/>}/>
       <Route path='/products/:productsId' element={<Details/>}/>
-      <Route path='/SignUp' element={<SignUp setToken={setToken}/>}/>
+      <Route path='/SignUp' element={<SignUp token={token} setToken={setToken}/>}/>
     </Routes>
+    {/* <Auth token={token} setToken={setToken}/> */}
     </div>
   );
 }

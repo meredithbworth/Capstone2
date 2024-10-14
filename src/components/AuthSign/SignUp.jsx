@@ -7,14 +7,17 @@ export default function SignUp({setToken}) {
 
 async function handleSubmit(e){
     e.preventDefault();
-    setError(null);
+    // setError(null);
 
     try {
     // throw new Error('Parameter is not a number!');
       const response = await fetch("https://fakestoreapi.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" }, 
-        body: JSON.stringify({username:login, password}),
+        body:JSON.stringify({
+          username: "mor_2314",
+          password: "83r5^_"
+      })
       })
       const result = await response.json();
       setToken(result.token);
@@ -30,9 +33,12 @@ async function handleSubmit(e){
         {error && <p>{error}</p>}
 
         <form onSubmit={handleSubmit} className="form-front">
-            <label>Login: <input value={login} onChange={(e) => setLogin(e.target.value)}/>
+            <label>Login: 
+              <input value={login} onChange={(e) => setLogin(e.target.value)}/>
             </label>
-            <label>Password: <input value={password} onChange={(e) => setPassword(e.target.value)}/>
+
+            <label>Password: 
+              <input value={password} onChange={(e) => setPassword(e.target.value)}/>
             </label>
             <button>Submit</button>
         </form>

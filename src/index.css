@@ -13,6 +13,8 @@ body {
   font-family: monospace;
   color: white;
   font-size: 22px; 
+  margin: 15px;
+  /* position: fixed; */
 }
 
 a {
@@ -63,14 +65,16 @@ a.active {
 }
 
 .products {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: absolute;
 }
 
 .product-card {
- width: 310px;
- height: 450px;
+ width:290px;
+ height: 475px;
  margin: 30px; 
  background-color: black;
  border: 2px;
@@ -86,7 +90,8 @@ a.active {
 
 
 .product-image {
- width: 150px;
+ width: 250px;
+ height: 300px;
  /* height: 150px; 
  object-fit: contain;
  margin-left: 30px;
@@ -94,17 +99,15 @@ a.active {
  /* margin-bottom: 40px; */
 }
 
-.product-title {
-  /* justify-content: left; */
-}
-
 p {
-  font-size: 25px;
+  font-size: 20px;
+  font-family: monospace;
 }
 
 .price {
   text-align: center;
   color: white;
+  margin: 3px;
 }
 
 .product-details-individual {
@@ -143,7 +146,7 @@ p {
   font-size: 7rem;
   display: flex;
   justify-content: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
   margin: 12%;
 }
 
@@ -153,11 +156,8 @@ p {
 }
 
 .header-signup{
-  font-size: 3rem;
-}
-
-.login.div.container {
-  justify-content: center;
+  font-size: 50px;
+  font-family: monospace;
 }
 
 .form-front{
