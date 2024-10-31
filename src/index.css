@@ -74,7 +74,7 @@ a.active {
 
 .product-card {
  width:290px;
- height: 475px;
+ height: auto;
  margin: 30px; 
  background-color: black;
  border: 2px;
@@ -90,13 +90,18 @@ a.active {
 
 
 .product-image {
- width: 250px;
- height: 300px;
+ /* width: 250px;
+ height: 300px; */
  /* height: 150px; 
  object-fit: contain;
  margin-left: 30px;
  margin-right: 10px; */
  /* margin-bottom: 40px; */
+ max-width: 100%;
+ display: flex;
+  /* max-width:230px;
+  max-height:95px; */
+  height: auto;
 }
 
 p {
